@@ -1,0 +1,185 @@
+.from {
+  width:100%;
+  height:100%;
+  position: relative;
+  background: #13162e;
+}
+.votedot {
+  position: absolute;
+  left:5%;
+  bottom:-1rem;
+  animation: updown 5s linear infinite;
+}
+.votedot2 {
+  position: absolute;
+  right:5%;
+  bottom:-1rem;
+  animation: updown 4s linear infinite 2s;
+}
+.fromtop {
+  position: relative;
+  height: 20%;
+}
+.fromred {
+  width:30%;
+  position: absolute;
+  top:0;
+  right:10%;
+  animation: myfirst 3.6s linear infinite;
+}
+.fromword {
+  width:72%;
+  position: absolute;
+  top:0;
+  right:25%;
+  opacity: 0;
+  animation: fadeIn .8s forwards ease 1s;
+}
+.frominput {
+  width:80%;
+  margin: 0 auto;
+  opacity: 0;
+  position: relative;
+  z-index: 1000;
+  background-color: #13162e;
+  animation: fadeIn .5s forwards ease 1s;
+}
+.frominput0 {
+  width:100%;
+  height:0.36rem;
+  margin-bottom: 0.25rem;
+  border:none;
+  border-radius: 0.18rem;
+  background-color: #141f37;
+  font-size: 0.26rem;
+  overflow: hidden;
+}
+.inputleft {
+  width: 0.36rem;
+  height:0.36rem;
+  position: relative;
+  border-radius: 0.18rem;
+  float:left;
+  text-align: center;
+  background-color: #01b4d1;
+  color:#fff;
+  z-index: 10000
+}
+.inputing {
+  width:100%;
+  height:100%;
+  position: relative;
+  line-height: 1;
+  border:none;
+  border-top-right-radius: 0.18rem;
+  border-bottom-right-radius: 0.18rem;
+}
+.inputnum {
+  position: absolute;
+  width:2rem;
+  height:100%;
+  padding-left:0.1rem;
+  line-height: 1;
+  color:#01b4d1;
+  font-size: 0.24rem;
+  right:0.1rem;
+  top: 0;
+  text-align: right;
+  align-items:center;//子元素垂直居中
+  display:-webkit-flex;
+}
+.inputnumdiv {
+  
+}
+.inputnum div {
+  width:100%;
+  text-align: right;
+}
+ .frominputitem {
+   width: 0%;
+   height:100%;
+   position: relative;
+   line-height: 1;
+   border:none;
+   border-top-right-radius: 0.18rem;
+   border-bottom-right-radius: 0.18rem;
+   margin-left:0.18rem;
+   transition: width 2s;
+ }
+ .frominputitem01 {
+   @extend .frominputitem;
+   background-color: #9f7b50;
+ }
+ .frominputitem02 {
+   @extend .frominputitem;
+   background-color: #9d6751;
+ }
+ .frominputitem03 {
+   @extend .frominputitem;
+   background-color: #9c4851;
+ }
+ .frominputitem04 {
+   @extend .frominputitem;
+   background-color: #9a4889;
+ }
+ .frominputitem05 {
+   @extend .frominputitem;
+   background-color: #744aa7;
+ }
+ .frominputitem06 {
+   @extend .frominputitem;
+   background-color: #4a4aa5;
+ }
+ .frominputitem07 {
+   @extend .frominputitem;
+   background-color: #4777a4;
+ }
+ .frominputitem08 {
+   @extend .frominputitem;
+   background-color: #48999f;
+ }
+ .frominputitem09 {
+   @extend .frominputitem;
+   background-color: #48986f;
+ }
+ .frominputitem10 {
+   @extend .frominputitem;
+   background-color: #4a4aa5;
+ }
+
+ .button {
+   width:100%;
+   position: absolute;
+   bottom: 0;
+   right:-100%;
+ }
+ .sharebg {
+   @extend .button;
+   animation: leftright .8s forwards ease 1s;
+ }
+  .share {
+   @extend .button;
+   animation: leftright .8s forwards ease 1.5s;
+ }
+@keyframes myfirst
+{
+from {transform:rotate(0deg);}
+to {transform:rotate(360deg);}
+}
+
+@keyframes fadeIn
+{
+from {opacity: 0;}
+to {opacity: 1;}
+}
+@keyframes updown
+{
+from {bottom:-1rem;}
+to {bottom:15rem;}
+}
+
+@keyframes leftright
+{
+from {right:-100%;}
+to {right:0;}
+}

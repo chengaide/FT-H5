@@ -1,0 +1,137 @@
+.pro {
+  width:100%;
+  height:100%;
+  position: relative;
+  background: url(../../../../static/images/p6_2.jpg) no-repeat;
+  background-size: 100% 100%;
+  //animation: changebg 0.5s linear 1.5s forwards;
+}
+ .pro img {
+      display:block;
+    }
+.proimg {
+  position: absolute;
+  width:0;
+  left:50%;
+  top:50%;
+  opacity: 0;
+  animation: myfirst 0.5s linear 0.5s forwards,myfirst3 0.5s linear 0.5s forwards;
+}
+.probg {
+  width:100%;
+  position: absolute;
+  
+}
+.probgbg {
+  width:100%;
+  position: absolute;
+  animation: myfirst 2s linear infinite alternate;
+}
+.probg img {
+  width:100%;
+}
+.probg00{
+  width:100%;
+  position: absolute;
+}
+.probg01 {
+  width:100%;
+  position: absolute;
+  right:-100%;
+  opacity: 0;
+  animation: skew 0.5s linear 1s forwards,myfirst 1s linear 1s forwards
+}
+.probg02 {
+  width:100%;
+  position: absolute;
+  opacity: 0;
+  animation: myfirst4 3s linear 2s infinite,myfirst 1s linear 1s ;
+}
+.probg03 {
+  margin-left:100%;
+  opacity: 0;
+  animation: rightam 0.5s linear 1.5s forwards,myfirst 1s linear 1.5s forwards;
+}
+.probg04 {
+  margin-left:-100%;
+  opacity: 0;
+  animation: leftam 0.5s linear 1.8s forwards,myfirst 1s linear 1.5s forwards;
+}
+.probg05 {
+  margin-left:100%;
+  opacity: 0;
+  animation: rightam 0.5s linear 2.2s forwards,myfirst 1s linear 1.5s forwards,scale 0.2s linear 2.8s ;
+}
+.protime {
+  position: absolute;
+  width:100%;
+  bottom: 1rem;
+  opacity: 0;
+  animation: myfirst2 0.5s linear 1.5s forwards;
+}
+
+.gun2 {
+  width:0.06rem;
+  height:20%;
+  right:0.28rem;
+  top:10%;
+  position: absolute;
+  background-color: #1aa8d7;
+  animation: myfirst 6s linear infinite;
+}
+@keyframes myfirst
+{
+0%{opacity: 0}
+100% {opacity: 1}
+}
+@keyframes myfirst2
+{
+0%{opacity: 0;
+    bottom:1rem;}
+100% {opacity: 1;
+     bottom:0;
+     }
+}
+@keyframes myfirst3
+{
+0%{width:0%}
+50%{width:80%;left:10%;top:0.9rem}
+80%{width:90%;left:5%;top:1rem}
+100%{width:80%;left:10%;top:0.9rem}
+}
+@keyframes myfirst4
+{
+0%{opacity: 0.2}
+50% {opacity: 1}
+100% {opacity: 0.2}
+}
+@keyframes changebg {
+0%{
+  background:none;
+}  
+100% {
+  background: url(../../../../static/images/p6_2.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+}
+@keyframes skew
+{
+0%{right:-100%;transform:skew(-30deg,0deg);}
+50%{right:10%;transform:skew(30deg,0deg);}
+100%{right:0;transform:skew(0deg,0deg);}
+}
+@keyframes rightam
+{
+0%{margin-left:100%;}
+100%{margin-left:0;}
+}
+@keyframes leftam
+{
+0%{margin-left:-100%;}
+100%{margin-left:0;}
+}
+@keyframes scale
+{
+from {transform: scale(1,1)}
+to {transform: scale(1.5,1.5)}
+}

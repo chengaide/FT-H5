@@ -1,0 +1,34 @@
+.load {
+width:100%;
+height:100%;
+background:#13162e;
+text-align: center;
+}
+.contains {
+  width:50%;
+  height:10%;
+  margin-left:25%;
+  margin-top:70%;
+}
+.loading {
+  width:100%;
+  height: 0.15rem;
+  border: 0.05rem solid #fff;
+  border-radius: 0.1rem;
+}
+.loadingbg {
+  width:0;
+  height:100%;
+  background-color: #6ff900
+}
+.num {
+  font-size: 0.32rem;
+  color:#fff;
+  line-height: 0.8rem;
+}
+@keyframes myfirst
+{
+from {background:red;}
+to {background:yellow;}
+}
+

@@ -1,0 +1,622 @@
+.home {
+  width:100%;
+  height:100%;
+  position: relative;
+  background:#13162e url(../../../../static/images/p0.png) no-repeat;
+  background-size: 100% 100%;
+}
+.top {
+  width:100%;
+  position: absolute;
+  opacity:0;
+  animation: mydot .5s linear .5s forwards;
+}
+.rotate {
+  width:100%;
+  position: absolute;
+  top:12%;
+  opacity: 0;
+  animation: myfirst 3.6s linear 1s infinite, mydot .5s linear 1s forwards;
+}
+.dot {
+  width:0.28rem;
+  position: absolute;
+  top:1.2rem;
+  right:0.5rem;
+  opacity:0;
+  animation: mydot .5s linear .5s forwards;
+}
+.dot2 {
+  width:0.28rem;
+  position: absolute;
+  top:8rem;
+  left:0.5rem;
+  opacity:0;
+  animation: mydot .5s linear 1s forwards;
+}
+.title {
+  position: absolute;
+  width:100%;
+  bottom:0.7rem;
+  width:80%;
+  left:10%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 0.32rem;
+  color:#0a6580;
+  opacity:0;
+  color:#fff;
+  animation: mydot .5s linear 1.5s forwards;
+}
+.word {
+  position: absolute;
+  width:90%;
+  left:5%;
+  bottom:1.2rem;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 0.3rem;
+  color:#1fe7f7;
+  opacity:0;
+  margin:0;
+  padding:0;
+  margin-bottom: 0.01rem;
+  animation: mydot .5s linear 1.5s forwards;
+}
+// .spans {
+//   padding:0 5px;
+//   display: inline-block;
+//   border: 1px solid #1fe7f7
+// }
+.word1 {
+  @extend .word;
+  animation: word1 30s linear 2s infinite;
+}
+.word2 {
+  @extend .word;
+  animation: word2 30s linear 2s infinite;
+}
+.word3 {
+  @extend .word;
+  animation: word3 30s linear 2s infinite;
+}
+.word4 {
+  @extend .word;
+  animation: word4 30s linear 2s infinite;
+}
+.word5 {
+  @extend .word;
+  animation: word5 30s linear 2s infinite;
+}
+.word6 {
+  @extend .word;
+  animation: word6 30s linear 2s infinite;
+}
+.word7 {
+  @extend .word;
+  animation: word7 30s linear 2s infinite;
+}
+.word8 {
+  @extend .word;
+  animation: word8 30s linear 2s infinite;
+}
+.word9 {
+  @extend .word;
+  animation: word9 30s linear 2s infinite;
+}
+.word10 {
+  @extend .word;
+  animation: word10 30s linear 2s infinite;
+}
+.allquan {
+  position: absolute;
+  width:84%;
+  left:8%;
+  top:25%;
+  animation: myfirst .5s linear 1.2s ;
+}
+.circle2 {
+  width:0;
+  position: absolute;
+  top:50%;
+  left:50%;
+  opacity: 0;
+  animation: circle .5s linear 1.2s forwards;
+}
+.circle3 {
+  width:0;
+  position: absolute;
+  top:50%;
+  left:50%;
+  opacity: 0;
+  background: url(../../../../static/images/p3.png) no-repeat;
+  background-size: 100% 100%;
+  animation: circle3 .5s linear 1s forwards,changebg 30s linear 2s infinite;
+}
+.circle4 {
+  width:0;
+  position: absolute;
+  top:50%;
+  left:50%;
+  animation: circle5 .5s linear 1s forwards,myrotate36 30s linear 2.6s infinite;
+  //animation: circle5 .5s linear 1s forwards,myfirst2 3.6s linear infinite;
+}
+.au {
+  width:0.9rem;
+  height:0.9rem;
+  position: absolute;
+  background-color: #fff;
+  z-index: 1000;
+  opacity: 0;
+}
+.aurl {
+  @extend .au;
+  top:2%;
+  left:40%;
+}
+.aur2 {
+  @extend .au;
+  top:10%;
+  left:63%;
+}
+.aur3 {
+  @extend .au;
+  top:28%;
+  left:75%;
+}
+.aur4 {
+  @extend .au;
+  top:51%;
+  left:75%;
+}
+.aur5 {
+  @extend .au;
+  top:70%;
+  left:60%;
+}
+.aur6 {
+  @extend .au;
+  top:75%;
+  left:40%;
+}
+.aur7 {
+  @extend .au;
+  top:70%;
+  left:16%;
+}
+.aur8 {
+  @extend .au;
+  top:51%;
+  left:5%;
+}
+.aur9 {
+  @extend .au;
+  top:28%;
+  left:5%;
+}
+.aurl0 {
+  @extend .au;
+  top:10%;
+  left:16%;
+}
+@media (max-device-width : 320px) {
+
+}
+@media (min-device-width : 375px) and (max-device-width : 667px) {
+ 
+  .dot {
+  top:1.3rem;
+  right:0.8rem;
+}
+ .dot2 {
+  top:9.5rem;
+  left:0.5rem;
+}
+.title {
+  
+}
+.word1 {
+  
+}
+
+
+.aurl {
+  width:1.1rem;
+  height:1.1rem;
+  position: absolute;
+  z-index: 1000;
+  top:3%;
+  left:40%;
+}
+.aur2 {
+  width:1.1rem;
+  height:1.1rem;
+  position: absolute;
+  z-index: 1000;
+  top:10%;
+  left:60.5%;
+}
+.aur3 {
+  width:1.1rem;
+  height:1.1rem;
+  position: absolute;
+  z-index: 1000;
+  top:28.5%;
+  left:74%;
+}
+.aur4 {
+  width:1.1rem;
+  height:1.1rem;
+  position: absolute;
+  z-index: 1000;
+  top:50.5%;
+  left:73.5%;
+}
+.aur5 {
+  width:1.1rem;
+  height:1.1rem;
+  position: absolute;
+  z-index: 1000;
+  top:68.5%;
+  left:60.5%;
+}
+.aur6 {
+  width:1.1rem;
+  height:1.1rem;
+  position: absolute;
+  z-index: 1000;
+  top:74.5%;
+  left:40.5%;
+}
+.aur7 {
+  width:1.1rem;
+  height:1.1rem;
+  position: absolute;
+  z-index: 1000;
+  top:68.5%;
+  left:19.5%;
+}
+.aur8 {
+  width:1.1rem;
+  height:1.1rem;
+  position: absolute;
+  z-index: 1000;
+  top:50.5%;
+  left:6%;
+}
+.aur9 {
+  width:1.1rem;
+  height:1.1rem;
+  position: absolute;
+  z-index: 1000;
+  top:28.5%;
+  left:5.6%;
+}
+.aurl0 {
+  width:1.1rem;
+  height:1.1rem;
+  position: absolute;
+  z-index: 1000;
+  top:10.5%;
+  left:18.5%;
+}
+ }
+
+ @media (min-device-width : 668px) and (max-device-width : 780px) {
+
+  .dot {
+  width:0.5rem;
+  top:1.3rem;
+  right:0.8rem;
+
+}
+ .dot2 {
+  width:0.5rem;
+  top:15rem;
+  left:0.5rem;
+}
+.title {
+  font-size:0.6rem;
+  color:#fff;
+}
+.word {
+  font-size:0.6rem
+}
+
+
+.circle4 {
+  top:50%;
+  left:50%;
+  animation: circle5 .5s linear 1s forwards,myrotate36 30s linear 2.6s infinite;
+  //animation: circle9 .5s linear 1s forwards,myfirst2 3.6s linear infinite;
+}
+.au {
+  width:2rem;
+  height:2rem;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1000;
+}
+ 
+      @keyframes circle8
+      {
+      from {
+        width:0;
+        top:50%;
+        left:50%;
+        transform:rotate(0deg);
+        }
+      to {
+        width:68%;
+        top:6rem;
+        left:15.8%;
+        transform:rotate(360deg);
+            }
+      }
+      @keyframes circle9
+          {
+          from {
+            width:0;
+            top:50%;
+            left:50%;
+            transform:rotate(0deg);
+            }
+          to {
+            width:68%;
+            top:6rem;
+            left:15.8%;
+            transform:rotate(360deg);
+                }
+          }
+ }
+
+@keyframes myfirst
+{
+from {transform:rotate(0deg);}
+to {transform:rotate(360deg);}
+}
+@keyframes myfirst2
+{
+0%{transform:rotate(0deg);}
+100% {transform:rotate(-360deg);}
+}
+@keyframes mydot
+{
+from {opacity:0}
+to {opacity:1}
+}
+@keyframes word1
+{
+0% {opacity:1}
+9.999% {opacity:1}
+10% {opacity:0}
+100% {opacity:0}
+}
+@keyframes word2
+{
+0% {opacity:0}
+9.999% {opacity:0}
+10% {opacity:1}
+19.999% {opacity:1}
+20% {opacity:0}
+100% {opacity:0}
+}
+@keyframes word3
+{
+0% {opacity:0}
+19.999% {opacity:0}
+20% {opacity:1}
+29.999% {opacity:1}
+30% {opacity:0}
+100% {opacity:0}
+}
+@keyframes word4
+{
+0% {opacity:0}
+29.999% {opacity:0}
+30% {opacity:1}
+39.999% {opacity:1}
+40% {opacity:0}
+100% {opacity:0}
+}
+@keyframes word5
+{
+0% {opacity:0}
+39.999% {opacity:0}
+40% {opacity:1}
+49.999% {opacity:1}
+50% {opacity:0}
+100% {opacity:0}
+}
+@keyframes word6
+{
+0% {opacity:0}
+49.999% {opacity:0}
+50% {opacity:1}
+59.999% {opacity:1}
+60% {opacity:0}
+100% {opacity:0}
+}
+@keyframes word7
+{
+0% {opacity:0}
+59.999% {opacity:0}
+60% {opacity:1}
+69.999% {opacity:1}
+70% {opacity:0}
+100% {opacity:0}
+}
+@keyframes word8
+{
+0% {opacity:0}
+69.999% {opacity:0}
+70% {opacity:1}
+79.999% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+@keyframes word9
+{
+0% {opacity:0}
+79.999% {opacity:0}
+80% {opacity:1}
+89.999% {opacity:1}
+90%{opacity:0}
+100% {opacity:0}
+}
+@keyframes word10
+{
+0% {opacity:0}
+89.999% {opacity:0}
+90% {opacity:1}
+100% {opacity:1}
+}
+@keyframes circle
+{
+from {
+  width:0;
+  top:50%;
+  left:50%;
+  opacity: 0;
+  }
+to {
+  width:100%;
+  top:0;
+  left:0;
+  opacity: 1;
+      }
+}
+@keyframes circle3
+{
+from {
+  width:0;
+  top:50%;
+  left:50%;
+  opacity: 0;
+  transform:rotate(0deg);
+  }
+to {
+  width:100%;
+  top:0;
+  left:0;
+  opacity: 1;
+  transform:rotate(360deg);
+      }
+}
+@keyframes circle5
+{
+from {
+  width:0;
+  top:50%;
+  left:50%;
+  }
+to {
+  width:100%;
+  top:0;
+  left:0;
+      }
+}
+
+@keyframes changebg {
+0% {
+  background: url(../../../../static/images/bg01.png) no-repeat;
+  background-size: 100% 100%;
+}
+9.999% {
+  background: url(../../../../static/images/bg01.png) no-repeat;
+  background-size: 100% 100%;
+}
+10% {
+  background: url(../../../../static/images/bg02.png) no-repeat;
+  background-size: 100% 100%;
+}
+19.999% {
+  background: url(../../../../static/images/bg02.png) no-repeat;
+  background-size: 100% 100%;
+}
+20% {
+  background: url(../../../../static/images/bg03.png) no-repeat;
+  background-size: 100% 100%;
+}
+29.999% {
+  background: url(../../../../static/images/bg03.png) no-repeat;
+  background-size: 100% 100%;
+}
+30% {
+  background: url(../../../../static/images/bg04.png) no-repeat;
+  background-size: 100% 100%;
+}
+39.999% {
+  background: url(../../../../static/images/bg04.png) no-repeat;
+  background-size: 100% 100%;
+}
+40% {
+  background: url(../../../../static/images/bg05.png) no-repeat;
+  background-size: 100% 100%;
+}
+49.999% {
+  background: url(../../../../static/images/bg05.png) no-repeat;
+  background-size: 100% 100%;
+}
+50% {
+  background: url(../../../../static/images/bg06.png) no-repeat;
+  background-size: 100% 100%;
+}
+59.999% {
+  background: url(../../../../static/images/bg06.png) no-repeat;
+  background-size: 100% 100%;
+}
+60% {
+  background: url(../../../../static/images/bg07.png) no-repeat;
+  background-size: 100% 100%;
+}
+69.999% {
+  background: url(../../../../static/images/bg07.png) no-repeat;
+  background-size: 100% 100%;
+}
+70% {
+  background: url(../../../../static/images/bg08.png) no-repeat;
+  background-size: 100% 100%;
+}
+79.999% {
+  background: url(../../../../static/images/bg08.png) no-repeat;
+  background-size: 100% 100%;
+}
+80% {
+  background: url(../../../../static/images/bg09.png) no-repeat;
+  background-size: 100% 100%;
+}
+89.999% {
+  background: url(../../../../static/images/bg09.png) no-repeat;
+  background-size: 100% 100%;
+}
+90% {
+  background: url(../../../../static/images/bg10.png) no-repeat;
+  background-size: 100% 100%;
+}
+100% {
+  background: url(../../../../static/images/bg10.png) no-repeat;
+  background-size: 100% 100%;
+}
+}
+@keyframes myrotate36
+{
+0%{transform:rotate(0deg);}
+10%{transform:rotate(36deg);}
+20%{transform:rotate(72deg);}
+30%{transform:rotate(108deg);}
+40%{transform:rotate(144deg);}
+50%{transform:rotate(180deg);}
+60%{transform:rotate(216deg);}
+70%{transform:rotate(252deg);}
+80%{transform:rotate(288deg);}
+90%{transform:rotate(324deg);}
+100% {transform:rotate(360deg);}
+}
+
+
+

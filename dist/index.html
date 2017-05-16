@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta charset="utf-8"><meta name="Cache-Control" content="private"><script>!function (e) { function t(a) { if (i[a]) return i[a].exports; var n = i[a] = { exports: {}, id: a, loaded: !1 }; return e[a].call(n.exports, n, n.exports, t), n.loaded = !0, n.exports } var i = {}; return t.m = e, t.c = i, t.p = "", t(0) }([function (e, t) { "use strict"; Object.defineProperty(t, "__esModule", { value: !0 }); var i = window; t["default"] = i.flex = function (e, t) { var a = e || 100, n = t || 1, r = i.document, o = navigator.userAgent, d = o.match(/Android[\S\s]+AppleWebkit\/(\d{3})/i), l = o.match(/U3\/((\d+|\.){5,})/i), c = l && parseInt(l[1].split(".").join(""), 10) >= 80, p = navigator.appVersion.match(/(iphone|ipad|ipod)/gi), s = i.devicePixelRatio || 1; p || d && d[1] > 534 || c || (s = 1); var u = 1 / s, m = r.querySelector('meta[name="viewport"]'); m || (m = r.createElement("meta"), m.setAttribute("name", "viewport"), r.head.appendChild(m)), m.setAttribute("content", "width=device-width,user-scalable=no,initial-scale=" + u + ",maximum-scale=" + u + ",minimum-scale=" + u), r.documentElement.style.fontSize = a / 2 * s * n + "px" }, e.exports = t["default"] }]);
+    flex(100, 1);</script><style>html,
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    .load {
+      width: 100%;
+      height: 100%;
+      background: #13162e;
+      text-align: center;
+    }
+    
+    .contains {
+      width: 50%;
+      height: 100%;
+      background: #13162e;
+      margin-left: 25%;
+      padding-top: 70%;
+    }
+    
+    .loading {
+      width: 100%;
+      height: 0.15rem;
+      border: 0.05rem solid #fff;
+      border-radius: 0.1rem;
+    }
+    
+    .loadingbg {
+      width: 0;
+      height: 100%;
+      background-color: #6ff900
+    }
+    
+    .num {
+      font-size: 0.32rem;
+      color: #fff;
+      line-height: 0.8rem;
+    }
+    
+    #app {
+      display: none
+    }
+    
+    #music {
+      position: absolute;
+      width: 0.4rem;
+      height: 0.4rem;
+      z-index: 5555555;
+      top: 0.3rem;
+      right: 0.2rem;
+      display: none;
+    }
+    
+    .musicplay {
+      animation: music 1.5s linear infinite;
+      -webkit-animation: music 1.5s linear infinite;
+    }
+    
+    .pauseWalk {
+      animation-play-state: paused;
+      -webkit-animation-play-state: paused;
+      /* Safari 和 Chrome */
+    }
+    
+    @keyframes music {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @-webkit-keyframes music {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }</style><title>挑战赛决赛队伍出炉 | 达康书记喊你来投票啦！</title><link rel="shortcut icon" href="favicon.ico"></head><body><div id="loading" class="load"><div class="contains"><div class="loading"><div id="loadings" class="loadingbg"></div></div><div id="load-num" class="num">0%</div><div style="margin:10rem 0 -1rem 0"></div></div></div><img id="music" class="musicplay" src="static/images/music.png"><div id="app"></div><script src="static/js/preloadjs-0.6.2.min.js"></script><script src="static/js/zepto.min.js"></script><script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script><script type="text/javascript">function wxajax() {
+       var url = location.href;
+
+      if (url.indexOf('/?from=') > -1) {
+        url = url.replace('#/', '');
+        url = url.replace('/?from=', '/#/?from=');
+        window.location.href = url;
+      }
+      $.ajax({
+        type: "POST",
+        url: 'http://api.xingxiao.nowui.com/wechat/share?url=' + url,
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'token': '',
+          'platform': 'WEB',
+          'version': '1.0.0'
+        },
+        data: JSON.stringify({}),
+        success: function (data, status, xhr) {
+          wx.config({
+            debug: false,
+            appId: "wx26c8db6f1987e4e0",
+            timestamp: data.timestamp,
+            nonceStr: data.nonceStr,
+            signature: data.signature,
+            jsApiList: [
+              'checkJsApi',
+              'onMenuShareTimeline',
+              'onMenuShareAppMessage',
+              'onMenuShareQQ',
+              'onMenuShareWeibo'
+            ]
+          });
+
+          window.share_config = {
+            "share": {
+              "imgUrl": "http://h5.guangfeng.nowui.com/static/images/share.jpg",
+              "desc": "投票赢取广州决战机会和羊城文化体验一日游~！",
+              "title": '挑战赛决赛队伍出炉 | 达康书记喊你来投票啦！',
+              "link": url,
+              "success": function () {
+
+              },
+              'cancel': function () {
+
+              }
+            }
+          };
+          wx.ready(function () {
+            wx.onMenuShareAppMessage(share_config.share);
+            wx.onMenuShareTimeline(share_config.share);
+            wx.onMenuShareQQ(share_config.share);
+            // var audio = document.createElement('audio')  //生成一个audio元素
+            // audio.src = "static/music.mp3";  //音乐的路径
+            // audio.autoplay = true;
+            // audio.loop = true;
+            // audio.id = "music1";
+            // document.body.appendChild(audio)  //把它添加到页面中
+            document.querySelector('audio').play();
+          });
+        },
+        error: function (xhr, errorType, error) {
+
+        },
+        complete: function (xhr, status) {
+
+        }
+      });
+    }</script><script src="static/js/loading.js"></script><script type="text/javascript" src="vendor.js?f249a8e95faa2999c05c"></script><script type="text/javascript" src="bundle.js?f249a8e95faa2999c05c"></script></body></html>
